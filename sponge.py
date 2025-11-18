@@ -29,6 +29,7 @@ def sponge_case(sentence):
         elif count % 2 != 0 and current_character.isalpha(): # odd
             result.append(current_character.lower())
         elif current_character == " ":
+            count = 0
             result.append(" ")
 
     print("".join(result))
@@ -43,7 +44,7 @@ def sponge_case(sentence):
 # Test cases
 assert sponge_case("spongebob") == "sPoNgEbOb"
 assert sponge_case("Who are YOU calling A Pinhead") == "wHo aRe yOu cAlLiNg a pInHeAd"
-#assert sponge_case("WHAT is UP my dude") == "wHaT iS uP mY dUdE"
+assert sponge_case("WHAT is UP my dude") == "wHaT iS uP mY dUdE"
 assert sponge_case("E") == "e"
 assert sponge_case("e") == "e"
 
